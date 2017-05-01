@@ -26,7 +26,7 @@ if(!$mysqli){
 //get parameter
 $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
 $pagelimit = isset($_GET['pagelimit']) ? intval($_GET['pagelimit']) : 10;
-$userid = isset($_GET['userid']) ? $_GET['userid'] : null;
+$id = isset($_GET['id']) ? $_GET['id'] : null;
 
 if ($page < 1) {
 	$page = 1;
@@ -39,13 +39,17 @@ if ($pagelimit < 0) {
 $offset = $page * $pagelimit - $pagelimit;
 
 //query to get data from the table
-$query = sprintf("SELECT userid, firstname, lastname FROM user ORDER BY userid");
+$query = sprintf("SELECT id, firstname, lastname, lastmodified, created FROM user");
 
-if (isset($userid)) {
-	$query .= sprintf(" WHERE userid = '%s'", $userid);
+if (isset($id)) {
+	$query .= sprintf(" WHERE id = '%s'", $id);
 }
 
-$query .= sprintf("LIMIT %d, %d", $offset, $pagelimit);
+$query .= sprintf(" ORDER BY id");
+
+$query .= sprintf(" LIMIT %d, %d", $offset, $pagelimit);
+
+error_log($query);
 
 //execute query
 $result = $mysqli->query($query);
