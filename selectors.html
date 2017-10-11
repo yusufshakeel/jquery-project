@@ -2,26 +2,57 @@
 <html>
 <head>
 	<title>Selectors</title>
+
+	<style>
+	/*
+		#username {
+			color: blue;
+		}
+		.description {
+			font-size: 12px;
+		}
+	*/
+	/*
+		div {
+			font-size: 24px;
+		}
+	*/
+	/*
+		ul#fruits-1 > li {
+
+		}
+	*/
+	/*
+		ul#fruits-1 li {
+
+		}
+	*/
+	</style>
 </head>
 <body>
 
-	<p id="username">Yusuf Shakeel</p>
+	<!-- selecting element by id and class -->
+	<p id="username">yusufshakeel</p>
 	<p class="description">This is a sample description.</p>
-	<p>Hello World</p>
 
-	<ul class="fruits-1">
+	<!-- selecting element by tag -->
+	<div>Div 1</div>
+	<div>Div 2</div>
+	<div>Div 3</div>
+
+	<!-- selecting direct descendent and descendent -->
+	<ul id="fruits-1">
 		<li>Apple</li>
 		<li>Mango</li>
 		<li>Orange</li>
 		<li>Fruits-2 list:
-			<ul class="fruits-2">
+			<ul id="fruits-2">
 				<li>Banana</li>
-				<li> Pomegranate</li>
+				<li>Pomegranate</li>
 			</ul>
 		</li>
 	</ul>
 	
-
 	<!-- script -->
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/selectors.js"></script>
