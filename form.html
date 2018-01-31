@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+
+	<style>
+		input[type=text],
+		input[type=email],
+		input[type=password]{
+		  margin: 20px;
+		  display: block;
+		  padding: 5px;
+		  font-size: 16px;
+		}
+
+		select {
+		  margin: 20px;
+		  display: block;
+		}
+
+		textarea {
+		  margin: 20px;
+		  display: block;
+		  padding: 5px;
+		  font-size: 16px;
+		  width: 200px;
+		  resize: none;
+		}
+
+		input[type=radio],
+		input[type=checkbox] {
+			margin: 10px;
+		}
+
+		input[type=submit],
+		input[type=reset] {
+			margin: 15px;
+			padding: 5px;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+
+	<h3>Form Example</h3>
+
+	<form id="sample-form">
+		
+		<input type="text"
+				id="sample-input-text"
+				placeholder="Enter your name">
+		
+		<input type="email"
+				id="sample-input-email"
+				placeholder="Enter your email">
+		
+		<input type="password"
+				id="sample-input-password"
+				placeholder="Enter your password">
+
+		<p>Select any one fruit</p>
+
+		<select name="sample-select" id="sample-select">
+			<option value="-">--- Select ---</option>
+			<option value="Apple">Apple</option>
+			<option value="Mango">Mango</option>
+			<option value="Orange">Orange</option>
+		</select>
+
+		<textarea name="sample-textarea" 
+					id="sample-textarea" 
+					rows="5"
+					placeholder="Enter some short description"></textarea>
+
+		<br>
+
+		<p>Select your favourite OS</p>
+
+		<input type="checkbox"
+				name="sample-checkbox"
+				value="Ubuntu">Ubuntu
+
+		<input type="checkbox"
+				name="sample-checkbox"
+				value="Windows">Windows
+
+		<input type="checkbox"
+				name="sample-checkbox"
+				value="macOS">macOS
+
+		<input type="checkbox"
+				name="sample-checkbox"
+				value="others">Others
+
+		<br>
+
+		<p>Select any one device</p>
+
+		<input type="radio"
+				name="sample-radio"
+				value="desktop">Desktop
+
+		<input type="radio"
+				name="sample-radio"
+				value="laptop">Laptop
+
+		<input type="radio"
+				name="sample-radio"
+				value="smartphone">Smart Phone
+
+		<br>
+
+		<input type="checkbox"
+				name="required-checkbox"
+				id="required-checkbox"
+				required
+				value="iagree">I agree to the terms and conditions.
+
+		<br>
+
+		<input type="submit" value="Submit">
+		<input type="reset" value="Reset">
+
+	</form>
+	
+	<!-- script -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/form.js"></script>
+</body>
+</html>
